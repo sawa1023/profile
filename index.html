@@ -57,12 +57,15 @@
       text-decoration: underline;
     }
 
-    /* ───────────────── 페이지 레이아웃 ───────────────── */
+    /* ───────────────── 페이지 레이아웃 (문서 박스) ───────────────── */
 
     #page {
       max-width: 980px;
-      margin: 0 auto 40px auto;
-      padding: 10px 15px 0 15px;
+      margin: 20px auto 40px auto;
+      padding: 20px 25px 20px 25px;
+      background: #141414;
+      border: 1px solid #333333;
+      border-radius: 4px;
     }
 
     .doc-title {
@@ -124,12 +127,12 @@
 
     .char-infobox {
       float: right;
-      width: 360px;           /* ← 320px 에서 살짝 키움 */
+      width: 360px;
       background: #000000;
       border: 1px solid #555;
       border-collapse: collapse;
       font-size: 13px;
-      margin-left: 6px;       /* ← 12px 에서 줄여서 더 왼쪽으로 */
+      margin-left: 6px;
       margin-bottom: 12px;
     }
     .char-infobox th,
@@ -519,4 +522,3 @@
 </div>
 </body>
 </html>
-
