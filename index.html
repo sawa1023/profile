@@ -23,42 +23,39 @@
     a:hover { text-decoration: underline; }
 
     /* ───────────────── 헤더(메인 메뉴 / 이불위키) ───────────────── */
+    #topbar {
+      background: #141414;              
+      border-bottom: 2px solid #ffb54a;  
+      color: #f5f5f5;
+      padding: 10px 0;
+    }
 
-/* ───────────────── 헤더(메인 메뉴 / 이불위키) ───────────────── */
-#topbar {
-  background: #141414;             /* 문서 박스와 동일한 어두운 배경 */
-  border-bottom: 2px solid #ffb54a; /* ★ 문서와 상단바를 구분하는 주황색 라인 유지 */
-  color: #f5f5f5;
-  padding: 10px 0;                 /* 높이 여유 있게 */
-}
+    #topbar-inner {
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 6px 15px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 13px;
+    }
 
-#topbar-inner {
-  max-width: 980px;
-  margin: 0 auto;
-  padding: 6px 15px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  font-size: 13px;
-}
+    .site-name {
+      font-weight: 700;
+      font-size: 18px;
+      color: #ffcc33;
+    }
 
-.site-name {
-  font-weight: 700;
-  font-size: 18px;
-  color: #ffcc33;
-}
-
-.top-menu a {
-  margin-left: 12px;
-  font-size: 13px;
-  color: #dddddd;
-  text-decoration: none;
-}
-.top-menu a:hover {
-  color: #ffcc33;
-  text-decoration: underline;
-}
-
+    .top-menu a {
+      margin-left: 12px;
+      font-size: 13px;
+      color: #dddddd;
+      text-decoration: none;
+    }
+    .top-menu a:hover {
+      color: #ffcc33;
+      text-decoration: underline;
+    }
 
     /* ───────────────── 페이지 레이아웃 (문서 박스) ───────────────── */
 
@@ -186,29 +183,6 @@
       margin-bottom: 3px;
     }
 
-    .spoiler-trigger {
-      font-size: 12px;
-      color: #ffc96b;
-      cursor: pointer;
-      margin-bottom: 2px;
-    }
-    .spoiler-trigger:hover {
-      text-decoration: underline;
-      color: #ffdd88;
-    }
-
-    .spoiler-slide {
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height 0.35s ease;
-    }
-
-    .spoiler-inner {
-      margin-top: 4px;
-      font-size: 12px;
-      color: #ffeb9a;
-    }
-
     /* 본문 구역 */
 
     h2 {
@@ -278,7 +252,7 @@
       margin-left: 4px;
     }
 
-    /* ───────── 명언/대사 박스 (텍스트 길이에 맞추는 스타일) ───────── */
+    /* ───────── 명언/대사 박스 ───────── */
 
     .quote-block {
       display: inline-block;
@@ -321,19 +295,6 @@
     }
   </style>
 
-  <script>
-    function toggleSpoiler() {
-      const box = document.getElementById("real-name-box");
-      if (!box) return;
-
-      if (box.style.maxHeight && box.style.maxHeight !== "0px") {
-        box.style.maxHeight = "0px";
-      } else {
-        box.style.maxHeight = box.scrollHeight + "px";
-      }
-    }
-  </script>
-
 </head>
 <body>
 
@@ -368,13 +329,7 @@
             <li><a href="#성격">2.3. 성격</a></li>
           </ol>
         </li>
-        <li>
-          <a href="#기타특징">3. 기타 특징</a>
-          <ol>
-            <li><a href="#좋아하는것">3.1. 좋아하는 것</a></li>
-            <li><a href="#싫어하는것">3.2. 싫어하는 것</a></li>
-          </ol>
-        </li>
+        <li><a href="#기타특징">3. 기타 특징</a></li>
         <li><a href="#커플링">4. 커플링</a></li>
         <li><a href="#여담">5. 여담</a></li>
       </ol>
@@ -386,15 +341,6 @@
         <td class="char-name-row" colspan="2">
           <div class="name-eng">Gardener</div>
           <div class="name-kor">가드너</div>
-
-          <div class="spoiler-trigger" onclick="toggleSpoiler()">
-            (스포일러)
-          </div>
-
-          <div id="real-name-box" class="spoiler-slide">
-            <div class="spoiler-inner">가드너의 본명</div>
-          </div>
-
         </td>
       </tr>
 
@@ -407,7 +353,7 @@
       <tr>
         <th>소속 게임</th>
         <td>
-          <a href="https://sawa1023.github.io/FALL-OF-TITAN/" 
+          <a href="https://sawa1023.github.io/FALL-OF-TITAN/"
              class="orange-link" target="_blank">
              FALL OF TITAN
           </a>
@@ -429,7 +375,6 @@
 
   <h2 id="개요">1. 개요</h2>
 
-  <!-- 캐치프레이즈 박스 -->
   <div class="quote-block">
     <div class="quote-main">
       잊힌 신전의 가드너.
@@ -440,8 +385,8 @@
     </div>
   </div>
 
-  <!-- 대사 박스 -->
   <br>
+
   <div class="quote-block">
     <div class="quote-main">
       “거인은 모두 묻힐거다.”
@@ -453,7 +398,7 @@
   </div>
 
   <p>
-    <a href="https://sawa1023.github.io/FALL-OF-TITAN/" 
+    <a href="https://sawa1023.github.io/FALL-OF-TITAN/"
        class="orange-link" target="_blank">
        FALL OF TITAN
     </a>
@@ -506,7 +451,7 @@
   <ul>
     <li>좋아하는 것과 달리, 싫어하는 것은 딱히 공개되어있지 않다. 허나 높은 곳에서 떨어지거나 거인의 몸에서 떨어져 바닥을 구르면 특유의 "나읏...!" 하는 신음과 함께 바닥을 때리며 일어난다거나, 돌이나 나뭇가지 등에 걸리면 낮은 확률로 넘어지며 마찬가지로 특유의 신음과 함께 원인을 차버리는 모션이 존재한다. 흙먼지가 묻는다거나 물에 젖을 때도 별다른 모션이 없으나 바닥과 접촉할 때만 이러한 상호작용이 있는 것으로 보아 땅과 접촉하는 것을 싫어하는 듯.<br></li>
     <li>유독 몸이 묶이는 것을 싫어한다. 거인의 손에 붙잡히거나 돌에 깔려 움직이지 못하는 장면에서 노골적으로 불쾌함을 드러냈다.<br></li>
-    <li>제작자가 밝히길 포도를 안좋아한다고 한다. 이유는  너무 셔서...</li>
+    <li>제작자가 밝히길 포도를 안좋아한다고 한다. 이유는 너무 셔서...</li>
   </ul>
 
   <h2 id="커플링">4. 커플링</h2>
@@ -515,9 +460,9 @@
   <h2 id="여담">5. 여담</h2>
   <ul>
     <li>어드벤쳐 퍼즐 게임, Nyaruut! 제작자의 야심찬 후속작이다. 전작에 비해 모든 면이 말도안되게 발전했다며 같은 제작자가 맞냐는 반응을 얻어낼 만큼 좋은 평가를 받았다.</li>
-    <li>덕분에 Nyaruut!도 잠시 인기를 얻었으나 괜히 망겜 소리를 듣는게 아니라며 금새 잠잠해졌다.</li>
     <li>출시 전 공개된 상징 이모지는 '🗿'.</li>
   </ul>
+
   <p class="small">
     이 문서는 팬메이드 자캐 문서이며, 실제로 존재하는 게임 및 웹사이트가 아닙니다.
   </p>
@@ -525,4 +470,3 @@
 </div>
 </body>
 </html>
-
