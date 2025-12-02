@@ -2,6 +2,7 @@
 <html lang="ko">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>가드너 - 이불위키</title>
   <style>
     * { box-sizing: border-box; }
@@ -285,14 +286,80 @@
       line-height: 1.7;
     }
 
-    @media (max-width: 800px) {
-      .toc-box,
-      .char-infobox {
-        float: none;
-        width: 100%;
-        margin: 0 0 8px 0;
-      }
-    }
+@media (max-width: 800px) {
+
+  body {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  #page {
+    margin: 10px auto 20px auto;
+    padding: 15px 12px;
+    border-radius: 0;
+  }
+
+  .doc-title {
+    font-size: 20px;
+  }
+
+  /* 제목 아래 인포박스 → 그 밑에 목차 순서로 쌓기 */
+  .top-layout {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .toc-box,
+  .char-infobox {
+    float: none;
+    width: 100%;
+    margin: 0 0 12px 0;
+  }
+
+  .char-infobox { 
+    order: 1;
+    font-size: 13px;
+  }
+
+  .toc-box { 
+    order: 2;
+    font-size: 12px;
+  }
+
+  .char-infobox th {
+    font-size: 12px;
+    width: 80px;
+  }
+
+  .char-image-cell img {
+    max-width: 80%;
+  }
+
+  /* 명언 박스는 화면폭 꽉 차게 */
+  .quote-block {
+    display: block;
+    width: 100%;
+  }
+}
+
+/* 아주 작은 화면 (폰 480px 이하) 튜닝 */
+@media (max-width: 480px) {
+  #topbar-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+
+  .top-menu a {
+    margin-left: 0;
+    margin-right: 8px;
+    font-size: 12px;
+  }
+
+  .char-image-cell img {
+    max-width: 100%;
+  }
+}
   </style>
 
 </head>
@@ -470,3 +537,4 @@
 </div>
 </body>
 </html>
+
